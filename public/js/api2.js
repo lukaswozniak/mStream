@@ -46,15 +46,15 @@ var MSTREAMAPI = (function () {
   }
 
   mstreamModule.loadFileplaylist = function (path, callback) {
-    makePOSTRequest('/fileplaylist/load', { path }, callback);
+    makePOSTRequest('./fileplaylist/load', { path }, callback);
   }
 
   mstreamModule.loadFileplaylistPaths = function (path, callback) {
-    makePOSTRequest('/fileplaylist/loadpaths', { path }, callback);
+    makePOSTRequest('./fileplaylist/loadpaths', { path }, callback);
   }
 
   mstreamModule.recursiveScan = function (directory, callback) {
-    makePOSTRequest('/files/recursive-scan', { dir: directory }, callback);
+    makePOSTRequest('./files/recursive-scan', { dir: directory }, callback);
   }
 
   mstreamModule.savePlaylist = function (title, songs, callback) {
